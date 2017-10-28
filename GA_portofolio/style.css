@@ -1,0 +1,104 @@
+/* Inheritance and specificity are really important when learning css. The specificity rule is that the more specific rule wins. Note, you can have multiple classes assigned to a css rule.*/
+/* Don't use ID's in the css. They have uses in html and javascript */
+/* The astrix (*) applies a style to all elements. Box-sizing ensures that it adjusts padding properly.*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: actor;
+  font-size: 1.25em;
+}
+
+header {
+  /*v-height means 100vh of the browers height*/
+  min-height: 100vh;
+  background: linear-gradient(rgb(243, 227, 247), rgb(96, 24, 112));
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  padding: 2%;
+}
+
+footer {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  padding: 2%;
+}
+
+/* this targets a tags inside a nav*/
+nav a {
+  color: white;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav ul{
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* align-content is part of flex box. It's new. You have a bit more control but it takes longer to understand */
+header main {
+  text-align: center;
+  /* note using ems on a child where the parent has ems, it multiplies the child making it bigger.*/
+  font-size: 1.25em;
+  padding-top: 3em;
+}
+
+/* Avoid nesting more than 3. */
+header main img {
+  padding: 1em; padding-bottom: 2em;
+  width: 25%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 15px;
+  color: rgb(96, 24, 112);
+  text-shadow: -8px 0 grey;
+}
+
+.about-me {
+  /*padding on top and bottom but none on the sides*/
+  padding: 3em 0;
+  /*this is double spacing*/
+  line-height: 1.5;
+  background-color: rgb(96, 24, 112);
+  color: white;
+}
+
+.about-me content {
+    /*Dont' apply justify to images as it makes the formatting go weird*/
+    text-align: justify;
+}
+
+.content {
+  width: 50%;
+  /* applies the margin 0 to top/botton and auto to sides. This makes it centered.*/
+  margin: 0 auto;
+}
+
+.projects img {
+  width: 30%;
+  padding: 30px 30px 30px 0;
+  display: inline-block;
+}
+
+.projects {
+  padding: 3em 0;
+  line-height: 1.5;
+  background-color: rgb(220, 220, 220);
+}
